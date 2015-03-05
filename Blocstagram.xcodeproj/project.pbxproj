@@ -10,9 +10,7 @@
 		330C9ADC1AA7FD1A000316BB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9ADB1AA7FD1A000316BB /* main.m */; };
 		330C9ADF1AA7FD1A000316BB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9ADE1AA7FD1A000316BB /* AppDelegate.m */; };
 		330C9AE21AA7FD1A000316BB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9AE11AA7FD1A000316BB /* ViewController.m */; };
-		330C9AE51AA7FD1A000316BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 330C9AE31AA7FD1A000316BB /* Main.storyboard */; };
 		330C9AE71AA7FD1A000316BB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 330C9AE61AA7FD1A000316BB /* Images.xcassets */; };
-		330C9AEA1AA7FD1A000316BB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 330C9AE81AA7FD1A000316BB /* LaunchScreen.xib */; };
 		330C9AF61AA7FD1A000316BB /* BlocstagramTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9AF51AA7FD1A000316BB /* BlocstagramTests.m */; };
 /* End PBXBuildFile section */
 
@@ -34,9 +32,7 @@
 		330C9ADE1AA7FD1A000316BB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		330C9AE01AA7FD1A000316BB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		330C9AE11AA7FD1A000316BB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		330C9AE41AA7FD1A000316BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		330C9AE61AA7FD1A000316BB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		330C9AE91AA7FD1A000316BB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		330C9AEF1AA7FD1A000316BB /* BlocstagramTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlocstagramTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		330C9AF41AA7FD1A000316BB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		330C9AF51AA7FD1A000316BB /* BlocstagramTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlocstagramTests.m; sourceTree = "<group>"; };
@@ -85,9 +81,7 @@
 				330C9ADE1AA7FD1A000316BB /* AppDelegate.m */,
 				330C9AE01AA7FD1A000316BB /* ViewController.h */,
 				330C9AE11AA7FD1A000316BB /* ViewController.m */,
-				330C9AE31AA7FD1A000316BB /* Main.storyboard */,
 				330C9AE61AA7FD1A000316BB /* Images.xcassets */,
-				330C9AE81AA7FD1A000316BB /* LaunchScreen.xib */,
 				330C9AD91AA7FD1A000316BB /* Supporting Files */,
 			);
 			path = Blocstagram;
@@ -168,6 +162,7 @@
 				TargetAttributes = {
 					330C9AD51AA7FD1A000316BB = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = CB9MM74V72;
 					};
 					330C9AEE1AA7FD1A000316BB = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -199,8 +194,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				330C9AE51AA7FD1A000316BB /* Main.storyboard in Resources */,
-				330C9AEA1AA7FD1A000316BB /* LaunchScreen.xib in Resources */,
 				330C9AE71AA7FD1A000316BB /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,25 +235,6 @@
 			targetProxy = 330C9AF01AA7FD1A000316BB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		330C9AE31AA7FD1A000316BB /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				330C9AE41AA7FD1A000316BB /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		330C9AE81AA7FD1A000316BB /* LaunchScreen.xib */ = {
-			isa = PBXVariantGroup;
-			children = (
-				330C9AE91AA7FD1A000316BB /* Base */,
-			);
-			name = LaunchScreen.xib;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		330C9AF71AA7FD1A000316BB /* Debug */ = {

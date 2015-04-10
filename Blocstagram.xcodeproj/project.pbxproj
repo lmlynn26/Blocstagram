@@ -13,6 +13,10 @@
 		330C9B0E1AA80404000316BB /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 330C9B041AA80404000316BB /* 5.jpg */; };
 		330C9B121AA80404000316BB /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 330C9B081AA80404000316BB /* 9.jpg */; };
 		330C9B161AA804C9000316BB /* BLCImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9B151AA804C9000316BB /* BLCImagesTableViewController.m */; };
+		33C31AA51AD4AE4600908304 /* BLCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AA41AD4AE4600908304 /* BLCUser.m */; };
+		33C31AA81AD4AFD600908304 /* BLCMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AA71AD4AFD600908304 /* BLCMedia.m */; };
+		33C31AAB1AD4B3EF00908304 /* BLCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AAA1AD4B3EF00908304 /* BLCComment.m */; };
+		33C31AAE1AD4B5C300908304 /* BLCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AAD1AD4B5C300908304 /* BLCDataSource.m */; };
 		33F35C071AA81F5B00C24924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F35C061AA81F5B00C24924 /* main.m */; };
 		33F35C0E1AA8FB9100C24924 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F35C081AA8FB9100C24924 /* 1.jpg */; };
 		33F35C0F1AA8FB9100C24924 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F35C091AA8FB9100C24924 /* 2.jpg */; };
@@ -47,6 +51,14 @@
 		330C9B081AA80404000316BB /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		330C9B141AA804C9000316BB /* BLCImagesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCImagesTableViewController.h; sourceTree = "<group>"; };
 		330C9B151AA804C9000316BB /* BLCImagesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCImagesTableViewController.m; sourceTree = "<group>"; };
+		33C31AA31AD4AE4600908304 /* BLCUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCUser.h; sourceTree = "<group>"; };
+		33C31AA41AD4AE4600908304 /* BLCUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCUser.m; sourceTree = "<group>"; };
+		33C31AA61AD4AFD600908304 /* BLCMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCMedia.h; sourceTree = "<group>"; };
+		33C31AA71AD4AFD600908304 /* BLCMedia.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMedia.m; sourceTree = "<group>"; };
+		33C31AA91AD4B3EF00908304 /* BLCComment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCComment.h; sourceTree = "<group>"; };
+		33C31AAA1AD4B3EF00908304 /* BLCComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCComment.m; sourceTree = "<group>"; };
+		33C31AAC1AD4B5C300908304 /* BLCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCDataSource.h; sourceTree = "<group>"; };
+		33C31AAD1AD4B5C300908304 /* BLCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCDataSource.m; sourceTree = "<group>"; };
 		33F35C061AA81F5B00C24924 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33F35C081AA8FB9100C24924 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		33F35C091AA8FB9100C24924 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -102,6 +114,14 @@
 				330C9ADE1AA7FD1A000316BB /* BLCAppDelegate.m */,
 				330C9B141AA804C9000316BB /* BLCImagesTableViewController.h */,
 				330C9B151AA804C9000316BB /* BLCImagesTableViewController.m */,
+				33C31AA31AD4AE4600908304 /* BLCUser.h */,
+				33C31AA41AD4AE4600908304 /* BLCUser.m */,
+				33C31AA61AD4AFD600908304 /* BLCMedia.h */,
+				33C31AA71AD4AFD600908304 /* BLCMedia.m */,
+				33C31AA91AD4B3EF00908304 /* BLCComment.h */,
+				33C31AAA1AD4B3EF00908304 /* BLCComment.m */,
+				33C31AAC1AD4B5C300908304 /* BLCDataSource.h */,
+				33C31AAD1AD4B5C300908304 /* BLCDataSource.m */,
 				330C9AE61AA7FD1A000316BB /* Images.xcassets */,
 				330C9AD91AA7FD1A000316BB /* Supporting Files */,
 			);
@@ -260,9 +280,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C31AA51AD4AE4600908304 /* BLCUser.m in Sources */,
 				330C9ADF1AA7FD1A000316BB /* BLCAppDelegate.m in Sources */,
 				33F35C071AA81F5B00C24924 /* main.m in Sources */,
 				330C9B161AA804C9000316BB /* BLCImagesTableViewController.m in Sources */,
+				33C31AA81AD4AFD600908304 /* BLCMedia.m in Sources */,
+				33C31AAB1AD4B3EF00908304 /* BLCComment.m in Sources */,
+				33C31AAE1AD4B5C300908304 /* BLCDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

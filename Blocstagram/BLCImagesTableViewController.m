@@ -11,6 +11,8 @@
 #import "BLCMedia.h"
 #import "BLCUser.h"
 #import "BLCComment.h"
+#import "BLCMediaTableViewCell.h"
+
 
 
 @interface BLCImagesTableViewController ()
@@ -30,7 +32,9 @@
 //        }
 //    }
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"imageCell"];
+//    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"imageCell"];
+    [self.tableView registerClass:[BLCMediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
+    
     
 }
 
@@ -65,30 +69,32 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
+//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"imageCell" forIndexPath:indexPath];
     
     // Configure the cell...
     
-    static NSInteger imageViewTag = 1234;
-    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:imageViewTag];
-    
-    if ( !imageView) {
-        //This is a new cell, it doesn't have an image yet
-        imageView = [[UIImageView alloc] init];
-        imageView.contentMode = UIViewContentModeScaleToFill;
-        
-        imageView.frame = cell.contentView.bounds;
-        imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
-        
-        imageView.tag = imageViewTag;
-        [cell.contentView addSubview:imageView];
-    }
-    
+//    static NSInteger imageViewTag = 1234;
+//    UIImageView *imageView = (UIImageView*)[cell.contentView viewWithTag:imageViewTag];
+//    
+//    if ( !imageView) {
+//        //This is a new cell, it doesn't have an image yet
+//        imageView = [[UIImageView alloc] init];
+//        imageView.contentMode = UIViewContentModeScaleToFill;
+//        
+//        imageView.frame = cell.contentView.bounds;
+//        imageView.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+//        
+//        imageView.tag = imageViewTag;
+//        [cell.contentView addSubview:imageView];
+//    }
+//    
 //    UIImage *image = self.images[indexPath.row];
 //    imageView.image = image;
-    
-    BLCMedia *item = [self items] [indexPath.row];
-    imageView.image = item.image;
+//    
+//    BLCMedia *item = [self items] [indexPath.row];
+//    imageView.image = item.image;
+    BLCMediaTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"mediaCell" forIndexPath:indexPath];
+    cell.mediaItem = [BLCDataSource sharedInstance].mediaItems[indexPath.row];
     
     
     return cell;
@@ -99,7 +105,9 @@
     BLCMedia *item = [self items] [indexPath.row];
     UIImage *image = item.image;
     
-    return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
+//    return (CGRectGetWidth(self.view.frame) / image.size.width) * image.size.height;
+    return 300 + (image.size.height / image.size.width * CGRectGetWidth(self.view.frame));
+    
 }
 
             
@@ -120,7 +128,7 @@
         [[self items] removeObjectAtIndex:indexPath.row];
     //[[self item] removeObjectAtIndex:indexPath.row];
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-//    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
+   } else if (editingStyle == UITableViewCellEditingStyleInsert) {
         // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
     }   
 }

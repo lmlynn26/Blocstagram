@@ -36,9 +36,40 @@
     
     [[BLCDataSource sharedInstance] addObserver:self forKeyPath:@"mediaItems" options:0 context:nil];
     
+    self.refreshControl = [[UIRefreshControl alloc] init];
+    [self.refreshControl addTarget:self action:@selector(refreshControlDidFire:) forControlEvents:UIControlEventValueChanged];
+    
     [self.tableView registerClass:[BLCMediaTableViewCell class] forCellReuseIdentifier:@"mediaCell"];
     
     
+}
+
+- (void) refreshControlDidFire:(UIRefreshControl *) sender {
+    [[BLCDataSource sharedInstance] requestNewItemsWithCompletionHandler:^(NSError *error) {
+        [sender endRefreshing];
+    }];
+    
+}
+
+- (void) infiniteScrollIfNecessary {
+    NSIndexPath *bottomIndexPath = [[self.tableView indexPathsForVisibleRows] lastObject];
+    
+    if (bottomIndexPath && bottomIndexPath.row == [BLCDataSource sharedInstance].mediaItems.count - 1) {
+        
+        [[BLCDataSource sharedInstance] requestOldItemsWithCompletionHandler:nil];
+    
+    }
+    NSLog(@"cough");
+}
+
+#pragma mark  - UIScrollViewDelegate
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    [self infiniteScrollIfNecessary];
+//}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    [self infiniteScrollIfNecessary];
 }
 
 - (void)didReceiveMemoryWarning {

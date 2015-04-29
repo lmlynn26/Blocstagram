@@ -18,6 +18,7 @@
 		33C31AA81AD4AFD600908304 /* BLCMedia.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AA71AD4AFD600908304 /* BLCMedia.m */; };
 		33C31AAB1AD4B3EF00908304 /* BLCComment.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AAA1AD4B3EF00908304 /* BLCComment.m */; };
 		33C31AAE1AD4B5C300908304 /* BLCDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AAD1AD4B5C300908304 /* BLCDataSource.m */; };
+		33D630B61AEADD5E00E983AD /* BLCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D630B51AEADD5E00E983AD /* BLCLoginViewController.m */; };
 		33F35C071AA81F5B00C24924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F35C061AA81F5B00C24924 /* main.m */; };
 		33F35C0E1AA8FB9100C24924 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F35C081AA8FB9100C24924 /* 1.jpg */; };
 		33F35C0F1AA8FB9100C24924 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F35C091AA8FB9100C24924 /* 2.jpg */; };
@@ -62,6 +63,8 @@
 		33C31AAA1AD4B3EF00908304 /* BLCComment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCComment.m; sourceTree = "<group>"; };
 		33C31AAC1AD4B5C300908304 /* BLCDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCDataSource.h; sourceTree = "<group>"; };
 		33C31AAD1AD4B5C300908304 /* BLCDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCDataSource.m; sourceTree = "<group>"; };
+		33D630B41AEADD5E00E983AD /* BLCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCLoginViewController.h; sourceTree = "<group>"; };
+		33D630B51AEADD5E00E983AD /* BLCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCLoginViewController.m; sourceTree = "<group>"; };
 		33F35C061AA81F5B00C24924 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33F35C081AA8FB9100C24924 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		33F35C091AA8FB9100C24924 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -125,6 +128,8 @@
 				33C31AAA1AD4B3EF00908304 /* BLCComment.m */,
 				33C31AAC1AD4B5C300908304 /* BLCDataSource.h */,
 				33C31AAD1AD4B5C300908304 /* BLCDataSource.m */,
+				33D630B41AEADD5E00E983AD /* BLCLoginViewController.h */,
+				33D630B51AEADD5E00E983AD /* BLCLoginViewController.m */,
 				330C9AE61AA7FD1A000316BB /* Images.xcassets */,
 				330C9AD91AA7FD1A000316BB /* Supporting Files */,
 				33A5BDCD1ADCAABC0025879C /* BLCMediaTableViewCell.h */,
@@ -293,6 +298,7 @@
 				33C31AAB1AD4B3EF00908304 /* BLCComment.m in Sources */,
 				33A5BDCF1ADCAABC0025879C /* BLCMediaTableViewCell.m in Sources */,
 				33C31AAE1AD4B5C300908304 /* BLCDataSource.m in Sources */,
+				33D630B61AEADD5E00E983AD /* BLCLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

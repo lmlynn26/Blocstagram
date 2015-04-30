@@ -130,10 +130,10 @@
 				33C31AAD1AD4B5C300908304 /* BLCDataSource.m */,
 				33D630B41AEADD5E00E983AD /* BLCLoginViewController.h */,
 				33D630B51AEADD5E00E983AD /* BLCLoginViewController.m */,
-				330C9AE61AA7FD1A000316BB /* Images.xcassets */,
-				330C9AD91AA7FD1A000316BB /* Supporting Files */,
 				33A5BDCD1ADCAABC0025879C /* BLCMediaTableViewCell.h */,
 				33A5BDCE1ADCAABC0025879C /* BLCMediaTableViewCell.m */,
+				330C9AE61AA7FD1A000316BB /* Images.xcassets */,
+				330C9AD91AA7FD1A000316BB /* Supporting Files */,
 			);
 			path = Blocstagram;
 			sourceTree = "<group>";

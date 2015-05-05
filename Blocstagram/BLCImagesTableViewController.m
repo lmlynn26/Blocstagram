@@ -59,7 +59,7 @@
         [[BLCDataSource sharedInstance] requestOldItemsWithCompletionHandler:nil];
     
     }
-    NSLog(@"cough");
+//    NSLog(@"cough");
 }
 
 #pragma mark  - UIScrollViewDelegate

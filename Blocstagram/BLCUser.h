@@ -10,7 +10,11 @@
 @import UIKit;
 
 
-@interface BLCUser : NSObject
+//@interface BLCUser : NSObject
+
+@interface BLCUser : NSObject <NSCoding>
+
+//@end
 
 @property (nonatomic, strong) NSString *idNumber;
 @property (nonatomic, strong) NSString *userName;

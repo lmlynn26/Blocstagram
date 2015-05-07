@@ -24,18 +24,27 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-//    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[BLCImagesTableViewController alloc] init]];
+    //    self.window.rootViewController = [[UINavigationController alloc] initWithRootViewController:[[BLCImagesTableViewController alloc] init]];
     
     [BLCDataSource sharedInstance];   // create the data source (so it can receive the access token notification)
     
     UINavigationController *navVC = [[UINavigationController alloc] init];
-    BLCLoginViewController *loginVC = [[BLCLoginViewController alloc] init];
-    [navVC setViewControllers:@[loginVC] animated:YES];
     
-    [[NSNotificationCenter defaultCenter] addObserverForName:BLCLoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note)  {
+    if (![BLCDataSource sharedInstance].accessToken) {
+        
+        BLCLoginViewController *loginVC = [[BLCLoginViewController alloc] init];
+        [navVC setViewControllers:@[loginVC] animated:YES];
+        
+        [[NSNotificationCenter defaultCenter] addObserverForName:BLCLoginViewControllerDidGetAccessTokenNotification object:nil queue:nil usingBlock:^(NSNotification *note)  {
+            BLCImagesTableViewController *imagesVC = [[BLCImagesTableViewController alloc] init];
+            [navVC setViewControllers:@[imagesVC] animated:YES];
+        }];
+    } else {
+        [[BLCDataSource sharedInstance] requestNewItemsWithCompletionHandler:nil];
+        
         BLCImagesTableViewController *imagesVC = [[BLCImagesTableViewController alloc] init];
         [navVC setViewControllers:@[imagesVC] animated:YES];
-    }];
+    }
     
     self.window.rootViewController = navVC;
     

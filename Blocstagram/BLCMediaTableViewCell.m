@@ -10,6 +10,7 @@
 #import "BLCMedia.h"
 #import "BLCComment.h"
 #import "BLCUser.h"
+#import "BLCDataSource.h"
 
 
 //@interface BLCMediaTableViewCell ()
@@ -26,6 +27,9 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *tapGestureRecognizer;
 @property (nonatomic, strong) UILongPressGestureRecognizer *longPressGestureRecognizer;
+
+@property (nonatomic, strong) UITapGestureRecognizer *tap2GestureRecognizer;
+
 
 @end
 
@@ -67,6 +71,13 @@ static NSParagraphStyle *paragraphStyle;
         self.tapGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapFired:)];
         self.tapGestureRecognizer.delegate = self;
         [self.mediaImageView addGestureRecognizer:self.tapGestureRecognizer];
+        
+        self.tap2GestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap2Fired:)];
+        self.tap2GestureRecognizer.delegate = self;
+        [self.mediaImageView addGestureRecognizer:self.tap2GestureRecognizer];
+        
+        self.tap2GestureRecognizer.numberOfTouchesRequired = 2;
+        
         
         self.longPressGestureRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(longPressFired:)];
         self.longPressGestureRecognizer.delegate = self;
@@ -128,6 +139,12 @@ static NSParagraphStyle *paragraphStyle;
     [self.delegate cell:self didTapImageView:self.mediaImageView];
     
 }
+
+- (void) tap2Fired:(UITapGestureRecognizer *)sender {
+    [[BLCDataSource sharedInstance] downloadImageForMediaItem:self.mediaItem];
+    
+}
+
 
     - (void) longPressFired:(UILongPressGestureRecognizer *)sender {
         if (sender.state == UIGestureRecognizerStateBegan) {
@@ -216,7 +233,7 @@ static NSParagraphStyle *paragraphStyle;
                 if (_mediaItem.image) {
                     self.imageHeightConstraint.constant = self.mediaItem.image.size.height / self.mediaItem.image.size.width * CGRectGetWidth(self.contentView.bounds);
                 } else {
-                    self.imageHeightConstraint.constant = 0;
+                    self.imageHeightConstraint.constant = 100;
                 }
 
         

@@ -21,7 +21,6 @@
 
 @property (nonatomic, strong) UIButton *shareButton;
 
-
 @end
 
 @implementation BLCMediaFullScreenViewController

@@ -108,7 +108,7 @@ static NSParagraphStyle *paragraphStyle;
                                                                      toItem:nil
                                                                   attribute:NSLayoutAttributeNotAnAttribute
                                                                  multiplier:1
-                                                                   constant:100];
+                                                                   constant:400];
         self.usernameAndCaptionLabelHeightConstraint = [NSLayoutConstraint constraintWithItem:_userNameAndCaptionLabel
                                                                                     attribute:NSLayoutAttributeHeight
                                                                                     relatedBy:NSLayoutRelationEqual
@@ -233,7 +233,7 @@ static NSParagraphStyle *paragraphStyle;
                 if (_mediaItem.image) {
                     self.imageHeightConstraint.constant = self.mediaItem.image.size.height / self.mediaItem.image.size.width * CGRectGetWidth(self.contentView.bounds);
                 } else {
-                    self.imageHeightConstraint.constant = 100;
+                    self.imageHeightConstraint.constant = 400;
                 }
 
         

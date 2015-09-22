@@ -30,6 +30,7 @@
             self.downloadState = BLCMediaDownloadStateNonRecoverableError;
         }
         
+        self.likeCount = [mediaDictionary[@"likes"][@"count"] intValue];
         NSDictionary *captionDictionary = mediaDictionary[@"caption"];
         
         // Caption might be null (if there's no caption)
@@ -79,6 +80,8 @@
         self.caption = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(caption))];
         self.comments = [aDecoder decodeObjectForKey:NSStringFromSelector(@selector(comments))];
         self.likeState = [aDecoder decodeIntegerForKey:NSStringFromSelector(@selector(likeState))];
+        self.likeCount = [aDecoder decodeIntForKey:NSStringFromSelector(@selector(likeCount))];
+
         
         
     }
@@ -94,6 +97,7 @@
     [aCoder encodeObject:self.caption forKey:NSStringFromSelector(@selector(caption))];
     [aCoder encodeObject:self.comments forKey:NSStringFromSelector(@selector(comments))];
     [aCoder encodeInteger:self.likeState forKey:NSStringFromSelector(@selector(likeState))];
+    [aCoder encodeInt:self.likeCount forKey:NSStringFromSelector(@selector(likeCount))];
 }
 
 @end

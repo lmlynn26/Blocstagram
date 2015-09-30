@@ -12,11 +12,14 @@
 #import "BLCUser.h"
 #import "BLCLikeButton.h"
 #import "BLCDataSource.h"
+#import "BLCComposeCommentView.h"
+
 
 
 //@interface BLCMediaTableViewCell ()
 
-@interface BLCMediaTableViewCell () <UIGestureRecognizerDelegate>
+@interface BLCMediaTableViewCell () <UIGestureRecognizerDelegate, BLCComposeCommentViewDelegate>
+
 
 
 @property (nonatomic, strong) UIImageView *mediaImageView;
@@ -99,7 +102,11 @@ static NSParagraphStyle *paragraphStyle;
         self.likeButton.backgroundColor = usernameLabelGray;
         self.likeCountLabel = [[UILabel alloc] init];
         
-        for (UIView *view in @[self.mediaImageView, self.userNameAndCaptionLabel, self.commentLabel, self.likeButton, self.likeCountLabel]) {
+//        for (UIView *view in @[self.mediaImageView, self.userNameAndCaptionLabel, self.commentLabel, self.likeButton, self.likeCountLabel]) {
+            self.commentView = [[BLCComposeCommentView alloc] init];
+            self.commentView.delegate = self;
+            
+            for (UIView *view in @[self.mediaImageView, self.userNameAndCaptionLabel, self.commentLabel, self.likeButton, self.commentView]) {
             
         
 //        for (UIView *view in @[self.mediaImageView, self.userNameAndCaptionLabel, self.commentLabel]) {
@@ -107,17 +114,25 @@ static NSParagraphStyle *paragraphStyle;
             view.translatesAutoresizingMaskIntoConstraints = NO;
         }
         
-        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_mediaImageView, _userNameAndCaptionLabel, _commentLabel, _likeButton, _likeCountLabel);
+//        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_mediaImageView, _userNameAndCaptionLabel, _commentLabel, _likeButton, _likeCountLabel);
+        
+        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_mediaImageView, _userNameAndCaptionLabel, _commentLabel, _likeButton, _commentView);
         
 //        NSDictionary *viewDictionary = NSDictionaryOfVariableBindings(_mediaImageView, _userNameAndCaptionLabel, _commentLabel);
         
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_mediaImageView]|" options:kNilOptions metrics:nil views:viewDictionary]];
  //       [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_userNameAndCaptionLabel]|" options:kNilOptions metrics:nil views:viewDictionary]];
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_userNameAndCaptionLabel]-5-[_likeCountLabel(==50)]-5-[_likeButton(==38)]|" options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom metrics:nil views:viewDictionary]];
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_userNameAndCaptionLabel]-5-[_likeButton(==38)]|" options:NSLayoutFormatAlignAllTop | NSLayoutFormatAlignAllBottom metrics:nil views:viewDictionary]];
         
         [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_commentLabel]|" options:kNilOptions metrics:nil views:viewDictionary]];
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_commentView]|" options:kNilOptions metrics:nil views:viewDictionary]];
+                                          
         
-        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_mediaImageView][_userNameAndCaptionLabel][_commentLabel]" options:kNilOptions metrics:nil views:viewDictionary]];
+//        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_mediaImageView][_userNameAndCaptionLabel][_commentLabel]" options:kNilOptions metrics:nil views:viewDictionary]];
+        [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_mediaImageView][_userNameAndCaptionLabel][_commentLabel][_commentView(==100)]"
+                                                                                 options:kNilOptions
+                                                                                 metrics:nil
+                                                                                 views:viewDictionary]];
         
         self.imageHeightConstraint = [NSLayoutConstraint constraintWithItem:_mediaImageView
                                                                   attribute:NSLayoutAttributeHeight
@@ -181,7 +196,8 @@ static NSParagraphStyle *paragraphStyle;
 - (void) likePressed:(UIButton *)sender {
     [self.delegate cellDidPressLikeButton:self];
 }
-    
+
+
     - (NSAttributedString *) usernameAndCaptionString {
         CGFloat usernameFontSize = 15;
         
@@ -231,6 +247,24 @@ static NSParagraphStyle *paragraphStyle;
 //       
 //    }
 
+#pragma mark - ComposeCommentViewDelegate
+
+- (void) commentViewDidPressCommentButton:(BLCComposeCommentView *)sender {
+    [self.delegate cell:self didComposeComment:self.mediaItem.temporaryComment];
+}
+
+- (void) commentView:(BLCComposeCommentView *)sender textDidChange:(NSString *)text {
+    self.mediaItem.temporaryComment = text;
+}
+
+- (void) commentViewWillStartEditing:(BLCComposeCommentView *)sender {
+    [self.delegate cellWillStartComposingComment:self];
+}
+
+- (void) stopComposingComment {
+    [self.commentView stopComposingComment];
+}
+
     
     - (void) layoutSubviews {
         [super layoutSubviews];
@@ -272,6 +306,8 @@ static NSParagraphStyle *paragraphStyle;
         self.commentLabel.attributedText = [self commentString];
         self.likeButton.likeButtonState = mediaItem.likeState;
         self.likeCountLabel.text = @(mediaItem.likeCount).stringValue;
+        self.commentView.text = mediaItem.temporaryComment;
+        
         
         
         
@@ -304,7 +340,7 @@ static NSParagraphStyle *paragraphStyle;
      [layoutCell layoutIfNeeded];
     
     // The height will be wherever the bottom of the comments label is
-    return CGRectGetMaxY(layoutCell.commentLabel.frame);
+    return CGRectGetMaxY(layoutCell.commentView.frame);
 }
 
 - (void)awakeFromNib {

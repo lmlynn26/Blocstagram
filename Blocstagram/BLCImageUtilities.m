@@ -140,7 +140,7 @@
     return image;
 }
 
-- (UIImage *) imageByScalingToSize:(CGSize)size andCrooppingWithRect:(CGRect)rect {
+- (UIImage *) imageByScalingToSize:(CGSize)size andCroppingWithRect:(CGRect)rect {
     
     UIImage* tempImage = [self imageWithFixedOrientation];
     tempImage = [tempImage imageResizedToMatchAspectRatioOfSize:size];

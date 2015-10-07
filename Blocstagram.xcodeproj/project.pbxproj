@@ -15,8 +15,8 @@
 		330C9B0E1AA80404000316BB /* 5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 330C9B041AA80404000316BB /* 5.jpg */; };
 		330C9B121AA80404000316BB /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 330C9B081AA80404000316BB /* 9.jpg */; };
 		330C9B161AA804C9000316BB /* BLCImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9B151AA804C9000316BB /* BLCImagesTableViewController.m */; };
-		333517821BB98E1C0012882C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 333517811BB98E1C0012882C /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
-		333517851BBADE4D0012882C /* BLCComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333517841BBADE4D0012882C /* BLCComposeCommentView.m */; settings = {ASSET_TAGS = (); }; };
+		333517821BB98E1C0012882C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 333517811BB98E1C0012882C /* Default-568h@2x.png */; };
+		333517851BBADE4D0012882C /* BLCComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333517841BBADE4D0012882C /* BLCComposeCommentView.m */; };
 		33A5BDCF1ADCAABC0025879C /* BLCMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A5BDCE1ADCAABC0025879C /* BLCMediaTableViewCell.m */; };
 		33BCC4941B0E658E00A3AF06 /* ShareUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BCC4931B0E658E00A3AF06 /* ShareUtils.m */; };
 		33C31AA51AD4AE4600908304 /* BLCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AA41AD4AE4600908304 /* BLCUser.m */; };
@@ -504,7 +504,9 @@
 			baseConfigurationReference = 3DC179B4550684DF5BFF9C81 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Blocstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bloc.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -516,7 +518,9 @@
 			baseConfigurationReference = 46F11614E8D763A45F226BF3 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Blocstagram/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Bloc.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";

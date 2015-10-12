@@ -17,6 +17,7 @@
 
 @interface BLCCameraViewController () <BLCCameraToolbarDelegate, UIAlertViewDelegate>
 
+
 @property (nonatomic, strong) UIView *imagePreview;
 
 @property (nonatomic, strong) AVCaptureSession *session;
@@ -270,7 +271,9 @@
             CGRect cropRect = gridRect;
             cropRect.origin.x = (CGRectGetMinX(gridRect) + (image.size.width - CGRectGetWidth(gridRect)) / 2);
             
-            image = [image imageCroppedToRect:cropRect];
+//            image = [image imageCroppedToRect:cropRect];
+              image = [image imageByScalingToSize: self.captureVideoPreviewLayer.bounds.size andCroppingWithRect:cropRect];
+            
             
             dispatch_async(dispatch_get_main_queue(), ^{
                 [self.delegate cameraViewController:self didCompleteWithImage:image];

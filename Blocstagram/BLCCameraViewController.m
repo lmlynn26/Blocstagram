@@ -255,8 +255,8 @@
         if (imageSampleBuffer) {
             NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
             UIImage *image = [UIImage imageWithData:imageData scale:[UIScreen mainScreen].scale];
-            image = [image imageWithFixedOrientation];
-            image = [image imageResizedToMatchAspectRatioOfSize:self.captureVideoPreviewLayer.bounds.size];
+//            image = [image imageWithFixedOrientation];
+//            image = [image imageResizedToMatchAspectRatioOfSize:self.captureVideoPreviewLayer.bounds.size];
             
             UIView *leftLine = self.verticalLines.firstObject;
             UIView *rightLine = self.verticalLines.lastObject;

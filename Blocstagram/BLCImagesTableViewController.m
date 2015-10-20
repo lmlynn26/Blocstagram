@@ -15,6 +15,7 @@
 #import "BLCMediaFullScreenViewController.h"
 #import "BLCMediaFullScreenAnimator.h"
 #import "BLCCameraViewController.h"
+ #import "BLCImageLibraryViewController.h"
 
 #import "ShareUtils.h"
 
@@ -24,7 +25,7 @@
 //  @interface BLCImagesTableViewController ()
 //@interface BLCImagesTableViewController () <BLCMediaTableViewCellDelegate>
 //@interface BLCImagesTableViewController () <BLCMediaTableViewCellDelegate, UIViewControllerTransitioningDelegate>
-@interface BLCImagesTableViewController () <BLCMediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, BLCCameraViewControllerDelegate>
+@interface BLCImagesTableViewController () <BLCMediaTableViewCellDelegate, UIViewControllerTransitioningDelegate, BLCCameraViewControllerDelegate, BLCImageLibraryViewControllerDelegate>
 
 
 @property (nonatomic, weak) UIImageView *lastTappedImageView;
@@ -177,10 +178,24 @@
 #pragma mark - Camera and BLCCameraViewControllerDelegate
 
 - (void) cameraPressed:(UIBarButtonItem *) sender {
+    
+    UIViewController *imageVC;
+    
+    if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
     BLCCameraViewController *cameraVC = [[BLCCameraViewController alloc] init];
     cameraVC.delegate = self;
-    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraVC];
+//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:cameraVC];
+        imageVC = cameraVC;
+    } else if ([UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeSavedPhotosAlbum]) {
+        BLCImageLibraryViewController *imageLibraryVC = [[BLCImageLibraryViewController alloc] init];
+        imageLibraryVC.delegate = self;
+        imageVC = imageLibraryVC;
+    }
+    
+    if (imageVC) {
+        UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:imageVC];
     [self presentViewController:nav animated:YES completion:nil];
+    }
     return;
 }
 
@@ -322,6 +337,16 @@
     
     
     return cell;
+}
+
+- (void) imageLibraryViewController:(BLCImageLibraryViewController *)imageLibraryViewController didCompleteWithImage:(UIImage *)image {
+    [imageLibraryViewController dismissViewControllerAnimated:YES completion:^{
+        if (image) {
+            NSLog(@"Got an image!");
+        } else {
+            NSLog(@"Closed without an image.");
+        }
+    }];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

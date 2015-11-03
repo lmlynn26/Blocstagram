@@ -2,6 +2,36 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BLCCollectionViewCellSubClass.h">
+   </FileRef>
+   <FileRef
+      location = "group:BLCCollectionViewCellSubClass.m">
+   </FileRef>
+   <FileRef
+      location = "group:Blocstagram/BLCPostToInstagramViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:Blocstagram/BLCPostToInstagramViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:Blocstagram/BLCImageLibraryViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:Blocstagram/BLCImageLibraryViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:BLCCropImageViewController.h">
+   </FileRef>
+   <FileRef
+      location = "group:BLCCropImageViewController.m">
+   </FileRef>
+   <FileRef
+      location = "group:BLCCropBox.h">
+   </FileRef>
+   <FileRef
+      location = "group:BLCCropBox.m">
+   </FileRef>
+   <FileRef
       location = "group:Blocstagram.xcodeproj">
    </FileRef>
    <FileRef

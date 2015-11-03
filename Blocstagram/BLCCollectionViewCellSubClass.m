@@ -10,9 +10,9 @@
 
 @interface BLCCollectionViewCellSubClass ()
 
-@property (strong, nonatomic) UIImageView *filterImageView;
-@property (strong, nonatomic) UIImage *filterImage;
-@property (strong, nonatomic) UILabel *filterLabel;
+//@property (strong, nonatomic) UIImageView *filterImageView;
+//@property (strong, nonatomic) UIImage *filterImage;
+//@property (strong, nonatomic) UILabel *filterLabel;
 
 
 @end
@@ -35,7 +35,7 @@
         self.filterLabel = (UILabel *)[self.contentView viewWithTag:labelTag];
         
         //        UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.filterCollectionView.collectionViewLayout;
-        CGFloat filterImageViewEdgeSize = self.frame.size.width;
+        CGFloat filterImageViewEdgeSize = 48;
         
         if (!self.filterImageView) {
             self.filterImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, filterImageViewEdgeSize, filterImageViewEdgeSize)];

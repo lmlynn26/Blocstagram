@@ -217,13 +217,13 @@
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
+    BLCCollectionViewCellSubClass *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"cell" forIndexPath:indexPath];
     
-    NSInteger imageViewTag = 1000;
-    NSInteger labelTag = 1001;
-
-    UIImageView *thumbnail = (UIImageView *)[cell.contentView viewWithTag:imageViewTag];
-    UILabel *label = (UILabel *)[cell.contentView viewWithTag:labelTag];
+//    NSInteger imageViewTag = 1000;
+//    NSInteger labelTag = 1001;
+//
+//    UIImageView *thumbnail = (UIImageView *)[cell.contentView viewWithTag:imageViewTag];
+//    UILabel *label = (UILabel *)[cell.contentView viewWithTag:labelTag];
     
 //    UICollectionViewFlowLayout *flowLayout = (UICollectionViewFlowLayout *)self.filterCollectionView.collectionViewLayout;
 //    CGFloat thumbnailEdgeSize = flowLayout.itemSize.width;
@@ -246,8 +246,8 @@
 //    }
     
     
-    thumbnail.image = self.filterImages[indexPath.row];
-    label.text = self.filterTitles[indexPath.row];
+    cell.filterImageView.image = self.filterImages[indexPath.row];
+    cell.filterLabel.text = self.filterTitles[indexPath.row];
     
     return cell;
 }

@@ -17,6 +17,8 @@
 		330C9B161AA804C9000316BB /* BLCImagesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 330C9B151AA804C9000316BB /* BLCImagesTableViewController.m */; };
 		333517821BB98E1C0012882C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 333517811BB98E1C0012882C /* Default-568h@2x.png */; };
 		333517851BBADE4D0012882C /* BLCComposeCommentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333517841BBADE4D0012882C /* BLCComposeCommentView.m */; };
+		339088021BDAB7A8008035E0 /* BLCPostToInstagramViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 339088011BDAB7A8008035E0 /* BLCPostToInstagramViewController.m */; };
+		339088051BE40B3E008035E0 /* BLCCollectionViewCellSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 339088041BE40B3E008035E0 /* BLCCollectionViewCellSubClass.m */; };
 		33A5BDCF1ADCAABC0025879C /* BLCMediaTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33A5BDCE1ADCAABC0025879C /* BLCMediaTableViewCell.m */; };
 		33BCC4941B0E658E00A3AF06 /* ShareUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 33BCC4931B0E658E00A3AF06 /* ShareUtils.m */; };
 		33C31AA51AD4AE4600908304 /* BLCUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C31AA41AD4AE4600908304 /* BLCUser.m */; };
@@ -26,6 +28,12 @@
 		33D063201B0289F400A19CCA /* BLCMediaFullScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D0631F1B0289F400A19CCA /* BLCMediaFullScreenViewController.m */; };
 		33D063231B029F6800A19CCA /* BLCMediaFullScreenAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D063221B029F6800A19CCA /* BLCMediaFullScreenAnimator.m */; };
 		33D630B61AEADD5E00E983AD /* BLCLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33D630B51AEADD5E00E983AD /* BLCLoginViewController.m */; };
+		33DC76A51BD4727500F786CC /* BLCCameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC76A41BD4727500F786CC /* BLCCameraViewController.m */; };
+		33DC76A91BD4729C00F786CC /* BLCImageUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC76A81BD4729C00F786CC /* BLCImageUtilities.m */; };
+		33DC76AC1BD5BE7400F786CC /* BLCCameraToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC76AB1BD5BE7400F786CC /* BLCCameraToolbar.m */; };
+		33DC76AF1BD5C27500F786CC /* BLCCropBox.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC76AE1BD5C27500F786CC /* BLCCropBox.m */; };
+		33DC76B21BD671E800F786CC /* BLCCropImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC76B11BD671E800F786CC /* BLCCropImageViewController.m */; };
+		33DC76B51BD6748400F786CC /* BLCImageLibraryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33DC76B41BD6748400F786CC /* BLCImageLibraryViewController.m */; };
 		33F35C071AA81F5B00C24924 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F35C061AA81F5B00C24924 /* main.m */; };
 		33F35C0E1AA8FB9100C24924 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F35C081AA8FB9100C24924 /* 1.jpg */; };
 		33F35C0F1AA8FB9100C24924 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33F35C091AA8FB9100C24924 /* 2.jpg */; };
@@ -68,6 +76,10 @@
 		333517811BB98E1C0012882C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		333517831BBADE4D0012882C /* BLCComposeCommentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCComposeCommentView.h; sourceTree = "<group>"; };
 		333517841BBADE4D0012882C /* BLCComposeCommentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCComposeCommentView.m; sourceTree = "<group>"; };
+		339088001BDAB7A8008035E0 /* BLCPostToInstagramViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCPostToInstagramViewController.h; sourceTree = "<group>"; };
+		339088011BDAB7A8008035E0 /* BLCPostToInstagramViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCPostToInstagramViewController.m; sourceTree = "<group>"; };
+		339088031BE40B2F008035E0 /* BLCCollectionViewCellSubClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BLCCollectionViewCellSubClass.h; sourceTree = "<group>"; };
+		339088041BE40B3E008035E0 /* BLCCollectionViewCellSubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCCollectionViewCellSubClass.m; sourceTree = "<group>"; };
 		33A5BDCD1ADCAABC0025879C /* BLCMediaTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCMediaTableViewCell.h; sourceTree = "<group>"; };
 		33A5BDCE1ADCAABC0025879C /* BLCMediaTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMediaTableViewCell.m; sourceTree = "<group>"; };
 		33BCC4921B0E658E00A3AF06 /* ShareUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShareUtils.h; sourceTree = "<group>"; };
@@ -86,6 +98,18 @@
 		33D063221B029F6800A19CCA /* BLCMediaFullScreenAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCMediaFullScreenAnimator.m; sourceTree = "<group>"; };
 		33D630B41AEADD5E00E983AD /* BLCLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCLoginViewController.h; sourceTree = "<group>"; };
 		33D630B51AEADD5E00E983AD /* BLCLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCLoginViewController.m; sourceTree = "<group>"; };
+		33DC76A41BD4727500F786CC /* BLCCameraViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCCameraViewController.m; sourceTree = "<group>"; };
+		33DC76A61BD4728300F786CC /* BLCCameraViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCCameraViewController.h; sourceTree = "<group>"; };
+		33DC76A71BD4729300F786CC /* BLCImageUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCImageUtilities.h; sourceTree = "<group>"; };
+		33DC76A81BD4729C00F786CC /* BLCImageUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCImageUtilities.m; sourceTree = "<group>"; };
+		33DC76AA1BD5BE5E00F786CC /* BLCCameraToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCCameraToolbar.h; sourceTree = "<group>"; };
+		33DC76AB1BD5BE7400F786CC /* BLCCameraToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCCameraToolbar.m; sourceTree = "<group>"; };
+		33DC76AD1BD5C27500F786CC /* BLCCropBox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCCropBox.h; sourceTree = "<group>"; };
+		33DC76AE1BD5C27500F786CC /* BLCCropBox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCCropBox.m; sourceTree = "<group>"; };
+		33DC76B01BD671E800F786CC /* BLCCropImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCCropImageViewController.h; sourceTree = "<group>"; };
+		33DC76B11BD671E800F786CC /* BLCCropImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCCropImageViewController.m; sourceTree = "<group>"; };
+		33DC76B31BD6748400F786CC /* BLCImageLibraryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BLCImageLibraryViewController.h; sourceTree = "<group>"; };
+		33DC76B41BD6748400F786CC /* BLCImageLibraryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BLCImageLibraryViewController.m; sourceTree = "<group>"; };
 		33F35C061AA81F5B00C24924 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		33F35C081AA8FB9100C24924 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		33F35C091AA8FB9100C24924 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
@@ -154,6 +178,22 @@
 				330C9AFF1AA80241000316BB /* Images */,
 				330C9ADD1AA7FD1A000316BB /* BLCAppDelegate.h */,
 				330C9ADE1AA7FD1A000316BB /* BLCAppDelegate.m */,
+				33DC76A71BD4729300F786CC /* BLCImageUtilities.h */,
+				33DC76A81BD4729C00F786CC /* BLCImageUtilities.m */,
+				33DC76AD1BD5C27500F786CC /* BLCCropBox.h */,
+				33DC76AE1BD5C27500F786CC /* BLCCropBox.m */,
+				33DC76B01BD671E800F786CC /* BLCCropImageViewController.h */,
+				33DC76B11BD671E800F786CC /* BLCCropImageViewController.m */,
+				33DC76B31BD6748400F786CC /* BLCImageLibraryViewController.h */,
+				33DC76B41BD6748400F786CC /* BLCImageLibraryViewController.m */,
+				339088031BE40B2F008035E0 /* BLCCollectionViewCellSubClass.h */,
+				339088041BE40B3E008035E0 /* BLCCollectionViewCellSubClass.m */,
+				339088001BDAB7A8008035E0 /* BLCPostToInstagramViewController.h */,
+				339088011BDAB7A8008035E0 /* BLCPostToInstagramViewController.m */,
+				33DC76AB1BD5BE7400F786CC /* BLCCameraToolbar.m */,
+				33DC76AA1BD5BE5E00F786CC /* BLCCameraToolbar.h */,
+				33DC76A61BD4728300F786CC /* BLCCameraViewController.h */,
+				33DC76A41BD4727500F786CC /* BLCCameraViewController.m */,
 				330C9B141AA804C9000316BB /* BLCImagesTableViewController.h */,
 				330C9B151AA804C9000316BB /* BLCImagesTableViewController.m */,
 				3306B55E1BAC8EE500F6E350 /* BLCCircleSpinnerView.h */,
@@ -383,19 +423,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				339088021BDAB7A8008035E0 /* BLCPostToInstagramViewController.m in Sources */,
 				3306B5631BB1882500F6E350 /* BLCLikeButton.m in Sources */,
 				33C31AA51AD4AE4600908304 /* BLCUser.m in Sources */,
 				33D063231B029F6800A19CCA /* BLCMediaFullScreenAnimator.m in Sources */,
 				330C9ADF1AA7FD1A000316BB /* BLCAppDelegate.m in Sources */,
+				33DC76AF1BD5C27500F786CC /* BLCCropBox.m in Sources */,
+				33DC76AC1BD5BE7400F786CC /* BLCCameraToolbar.m in Sources */,
 				33F35C071AA81F5B00C24924 /* main.m in Sources */,
 				330C9B161AA804C9000316BB /* BLCImagesTableViewController.m in Sources */,
 				33C31AA81AD4AFD600908304 /* BLCMedia.m in Sources */,
 				33C31AAB1AD4B3EF00908304 /* BLCComment.m in Sources */,
 				33D063201B0289F400A19CCA /* BLCMediaFullScreenViewController.m in Sources */,
+				339088051BE40B3E008035E0 /* BLCCollectionViewCellSubClass.m in Sources */,
 				33A5BDCF1ADCAABC0025879C /* BLCMediaTableViewCell.m in Sources */,
 				33C31AAE1AD4B5C300908304 /* BLCDataSource.m in Sources */,
 				33D630B61AEADD5E00E983AD /* BLCLoginViewController.m in Sources */,
+				33DC76B21BD671E800F786CC /* BLCCropImageViewController.m in Sources */,
 				3306B5601BAC8EE500F6E350 /* BLCCircleSpinnerView.m in Sources */,
+				33DC76A91BD4729C00F786CC /* BLCImageUtilities.m in Sources */,
+				33DC76B51BD6748400F786CC /* BLCImageLibraryViewController.m in Sources */,
+				33DC76A51BD4727500F786CC /* BLCCameraViewController.m in Sources */,
 				33BCC4941B0E658E00A3AF06 /* ShareUtils.m in Sources */,
 				333517851BBADE4D0012882C /* BLCComposeCommentView.m in Sources */,
 			);

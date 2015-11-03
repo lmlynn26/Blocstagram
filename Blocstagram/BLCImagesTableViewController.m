@@ -15,11 +15,11 @@
 #import "BLCMediaFullScreenViewController.h"
 #import "BLCMediaFullScreenAnimator.h"
 #import "BLCCameraViewController.h"
- #import "BLCImageLibraryViewController.h"
+#import "BLCImageLibraryViewController.h"
+#import "BLCPostToInstagramViewController.h"
+
 
 #import "ShareUtils.h"
-
-
 
 
 //  @interface BLCImagesTableViewController ()
@@ -199,14 +199,25 @@
     return;
 }
 
+- (void) handleImage:(UIImage *)image withNavigationController:(UINavigationController *)nav {
+    if (image) {
+        BLCPostToInstagramViewController *postVC = [[BLCPostToInstagramViewController alloc] initWithImage:image];
+        
+        [nav pushViewController:postVC animated:YES];
+    } else {
+        [nav dismissViewControllerAnimated:YES completion:nil];
+    }
+}
+
 - (void) cameraViewController:(BLCCameraViewController *)cameraViewController didCompleteWithImage:(UIImage *)image {
-    [cameraViewController dismissViewControllerAnimated:YES completion:^{
-        if (image) {
-            NSLog(@"Got an image!");
-        } else {
-            NSLog(@"Closed without an image.");
-        }
-    }];
+//    [cameraViewController dismissViewControllerAnimated:YES completion:^{
+//        if (image) {
+//            NSLog(@"Got an image!");
+//        } else {
+//            NSLog(@"Closed without an image.");
+//        }
+//    }];
+    [self handleImage:image withNavigationController:cameraViewController.navigationController];
 }
 
 
@@ -340,13 +351,14 @@
 }
 
 - (void) imageLibraryViewController:(BLCImageLibraryViewController *)imageLibraryViewController didCompleteWithImage:(UIImage *)image {
-    [imageLibraryViewController dismissViewControllerAnimated:YES completion:^{
-        if (image) {
-            NSLog(@"Got an image!");
-        } else {
-            NSLog(@"Closed without an image.");
-        }
-    }];
+//    [imageLibraryViewController dismissViewControllerAnimated:YES completion:^{
+//        if (image) {
+//            NSLog(@"Got an image!");
+//        } else {
+//            NSLog(@"Closed without an image.");
+//        }
+//    }];
+    [self handleImage:image withNavigationController:imageLibraryViewController.navigationController];
 }
 
 - (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {

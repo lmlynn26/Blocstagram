@@ -8,6 +8,8 @@
 
 #import "BLCMediaFullScreenAnimator.h"
 #import "BLCMediaFullScreenViewController.h"
+#import "BLCMedia.h"
+
 
 @implementation BLCMediaFullScreenAnimator
 

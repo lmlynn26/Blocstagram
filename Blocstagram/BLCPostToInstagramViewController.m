@@ -30,6 +30,8 @@
 
 @property (nonatomic, strong) UIDocumentInteractionController *documentController;
 
+
+
 @end
 
 @implementation BLCPostToInstagramViewController
@@ -175,21 +177,28 @@
             return;
         }
         
-        UIDocumentInteractionController *documentController = [UIDocumentInteractionController interactionControllerWithURL:fileURL];
-        documentController.UTI = @"com.instagram.exclusivegram";
+//        UIDocumentInteractionController *documentController = [UIDocumentInteractionController interactionControllerWithURL:fileURL];
+//        documentController.UTI = @"com.instagram.exclusivegram";
         
-        documentController.delegate = self;
+        self.documentController = [UIDocumentInteractionController interactionControllerWithURL:fileURL];
+        self.documentController.UTI = @"com.instagram.exclusivegram";
+        
+//        documentController.delegate = self;
+        self.documentController.delegate = self;
         
         NSString *caption = [alertView textFieldAtIndex:0].text;
         
         if (caption.length > 0) {
-            documentController.annotation = @{@"InstagramCaption": caption};
+//            documentController.annotation = @{@"InstagramCaption": caption};
+            self.documentController.annotation = @{@"InstagramCaption": caption};
         }
         
         if (self.sendButton.superview) {
-            [documentController presentOpenInMenuFromRect:self.sendButton.bounds inView:self.sendButton animated:YES];
+//            [documentController presentOpenInMenuFromRect:self.sendButton.bounds inView:self.sendButton animated:YES];
+                [self.documentController presentOpenInMenuFromRect:self.sendButton.bounds inView:self.sendButton animated:YES];
         } else {
-            [documentController presentOpenInMenuFromBarButtonItem:self.sendBarButton animated:YES];
+//            [documentController presentOpenInMenuFromBarButtonItem:self.sendBarButton animated:YES];
+                [self.documentController presentOpenInMenuFromBarButtonItem:self.sendBarButton animated:YES];
         }
     }
 }
@@ -197,9 +206,16 @@
 #pragma mark - UIDocumentInteractionControllerDelegate
 
 - (void)documentInteractionController:(UIDocumentInteractionController *)controller didEndSendingToApplication:(NSString *)application {
-    [self dismissViewControllerAnimated:YES completion:nil];
+    
+    
+//    [self dismissViewControllerAnimated:YES completion:nil];
+    
+        [[NSNotificationCenter defaultCenter] postNotificationName:BLCImageFinishedNotification object:self];
 }
 
+- (void)dealloc {
+    
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -274,7 +290,8 @@
             [self.filterImages addObject:image];
             [self.filterTitles addObject:filterTitle];
             
-            [self.filterCollectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:newIndex inSection:0]]];
+//            [self.filterCollectionView insertItemsAtIndexPaths:@[[NSIndexPath indexPathForItem:newIndex inSection:0]]];
+            [self.filterCollectionView reloadData];
         });
     }
 }

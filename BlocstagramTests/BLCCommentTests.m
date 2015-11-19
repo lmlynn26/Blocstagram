@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+#import "BLCComment.h"
+
 @interface BLCCommentTests : XCTestCase
 
 @end
@@ -25,9 +27,20 @@
     [super tearDown];
 }
 
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
+//- (void)testExample {
+//    // This is an example of a functional test case.
+//    XCTAssert(YES, @"Pass");
+//}
+
+- (void)testThatInitializationWorks
+{
+    NSDictionary *sourceDictionary = @{@"id": @"8675309",
+                                       @"text" : @"Sample Comment"};
+    
+    BLCComment *testComment = [[BLCComment alloc] initWithDictionary:sourceDictionary];
+    
+    XCTAssertEqualObjects(testComment.idNumber, sourceDictionary[@"id"], @"The ID number should be equal");
+    XCTAssertEqualObjects(testComment.text, sourceDictionary[@"text"], @"The text should be equal");
 }
 
 - (void)testPerformanceExample {

@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:BlocstagramTests/BLCComposeCommentViewTests.m">
+   </FileRef>
+   <FileRef
+      location = "group:BlocstagramTests/BLCMediaTableViewCellTests.m">
+   </FileRef>
+   <FileRef
+      location = "group:BlocstagramTests/BLCCommentTests.m">
+   </FileRef>
+   <FileRef
+      location = "group:BlocstagramTests/BLCUserTests.m">
+   </FileRef>
+   <FileRef
       location = "group:BLCCollectionViewCellSubClass.h">
    </FileRef>
    <FileRef

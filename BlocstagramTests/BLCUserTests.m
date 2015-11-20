@@ -9,8 +9,11 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
+<<<<<<< HEAD
 #import "BLCUser.h"
 
+=======
+>>>>>>> 7cb5c1d7aa28c6480db1608271c09cc6e3f8a10d
 @interface BLCUserTests : XCTestCase
 
 @end
@@ -27,6 +30,7 @@
     [super tearDown];
 }
 
+<<<<<<< HEAD
 //- (void)testExample {
 //    // This is an example of a functional test case.
 //    XCTAssert(YES, @"Pass");
@@ -44,6 +48,11 @@
     XCTAssertEqualObjects(testUser.userName, sourceDictionary[@"username"], @"The username should be equal");
     XCTAssertEqualObjects(testUser.fullName, sourceDictionary[@"full_name"], @"The full name should be equal");
     XCTAssertEqualObjects(testUser.profilePictureURL, [NSURL URLWithString:sourceDictionary[@"profile_picture"]], @"The profile picture should be equal");
+=======
+- (void)testExample {
+    // This is an example of a functional test case.
+    XCTAssert(YES, @"Pass");
+>>>>>>> 7cb5c1d7aa28c6480db1608271c09cc6e3f8a10d
 }
 
 - (void)testPerformanceExample {

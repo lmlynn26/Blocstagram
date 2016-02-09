@@ -9,11 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
 
-<<<<<<< HEAD
 #import "BLCComment.h"
 
-=======
->>>>>>> 7cb5c1d7aa28c6480db1608271c09cc6e3f8a10d
 @interface BLCCommentTests : XCTestCase
 
 @end
@@ -30,7 +27,6 @@
     [super tearDown];
 }
 
-<<<<<<< HEAD
 //- (void)testExample {
 //    // This is an example of a functional test case.
 //    XCTAssert(YES, @"Pass");
@@ -45,11 +41,6 @@
     
     XCTAssertEqualObjects(testComment.idNumber, sourceDictionary[@"id"], @"The ID number should be equal");
     XCTAssertEqualObjects(testComment.text, sourceDictionary[@"text"], @"The text should be equal");
-=======
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
->>>>>>> 7cb5c1d7aa28c6480db1608271c09cc6e3f8a10d
 }
 
 - (void)testPerformanceExample {

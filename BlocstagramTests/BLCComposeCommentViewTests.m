@@ -8,11 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import <XCTest/XCTest.h>
-<<<<<<< HEAD
 #import "BLCComposeCommentView.h"
 
-=======
->>>>>>> 7cb5c1d7aa28c6480db1608271c09cc6e3f8a10d
 
 @interface BLCComposeCommentViewTests : XCTestCase
 
@@ -30,7 +27,6 @@
     [super tearDown];
 }
 
-<<<<<<< HEAD
 //- (void)testExample {
 //    // This is an example of a functional test case.
 //    XCTAssert(YES, @"Pass");
@@ -48,11 +44,6 @@
     BLCComposeCommentView *composeComment = [[BLCComposeCommentView alloc] init];
     composeComment.text = nil;
     XCTAssertTrue(composeComment.isWritingComment == NO, @"There is an error in the comment section");
-=======
-- (void)testExample {
-    // This is an example of a functional test case.
-    XCTAssert(YES, @"Pass");
->>>>>>> 7cb5c1d7aa28c6480db1608271c09cc6e3f8a10d
 }
 
 - (void)testPerformanceExample {

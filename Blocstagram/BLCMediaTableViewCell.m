@@ -16,6 +16,8 @@
 
 #define isPhone ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone)
 
+// test commit change
+
 
 //@interface BLCMediaTableViewCell ()
 
